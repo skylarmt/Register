@@ -1,19 +1,3 @@
-/*
- * Decompiled with CFR 0_92.
- * 
- * Could not load the following classes:
- *  android.app.Activity
- *  android.content.Context
- *  android.content.Intent
- *  android.os.Bundle
- *  android.view.View
- *  android.widget.TextView
- *  android.widget.Toast
- *  java.lang.CharSequence
- *  java.lang.Class
- *  java.lang.String
- *  java.text.NumberFormat
- */
 package net.apocalypselabs.register;
 
 import android.app.Activity;
@@ -32,22 +16,23 @@ import net.apocalypselabs.register.Main;
 public class Thanks
 extends Activity {
     public void newtrans(View view) {
-        this.startActivity(new Intent(this.getApplicationContext(), (Class)Main.class));
+        this.startActivity(new Intent(this.getApplicationContext(), Main.class));
     }
 
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.setContentView(2130968579);
+        this.setContentView(R.layout.thanks);
         Bundle bundle2 = this.getIntent().getExtras();
         if (bundle2 != null) {
-            double d = bundle2.getDouble("total");
-            double d2 = bundle2.getDouble("paid");
-            ((TextView)this.findViewById(2131099660)).setText((CharSequence)(this.getString(2131034113) + ": " + NumberFormat.getCurrencyInstance().format(d)));
-            ((TextView)this.findViewById(2131099661)).setText((CharSequence)(this.getString(2131034124) + ": " + NumberFormat.getCurrencyInstance().format(d2 - d)));
+            double total = bundle2.getDouble("total");
+            double paid = bundle2.getDouble("paid");
+            ((TextView) findViewById(R.id.total_box)).setText(getString(R.string.total) + ": " + NumberFormat.getCurrencyInstance().format(total));
+            ((TextView) findViewById(R.id.change_box)).setText(getString(R.string.change) + ": " + NumberFormat.getCurrencyInstance().format(paid-total));
             return;
-        }
-        Toast.makeText((Context)this, (CharSequence)this.getString(2131034120), (int)1).show();
-        this.startActivity(new Intent(this.getApplicationContext(), (Class)Main.class));
+        } else {
+      		Toast.makeText(this, (CharSequence)this.getString(R.string.argerror), Toast.LENGTH_SHORT).show();
+      		startActivity(new Intent(getApplicationContext(), Main.class));
+		}
     }
 }
 
