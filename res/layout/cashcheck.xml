@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<import layout="total_price" />
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+		<ImageView android:id="@+id/oneBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="add" android:src="@drawable/c1" android:contentDescription="1"/>
+		<ImageView android:id="@+id/twoBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="add" android:src="@drawable/c2" android:contentDescription="2"/>
+		<ImageView android:id="@+id/fiveBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="add" android:src="@drawable/c5" android:contentDescription="5"/>
+		<ImageView android:id="@+id/tenBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="add" android:src="@drawable/c10" android:contentDescription="10"/>
+		<ImageView android:id="@+id/twentyBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="add" android:src="@drawable/c20" android:contentDescription="20"/>
+	</LinearLayout>
+</LinearLayout>
+

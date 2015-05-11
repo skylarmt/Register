@@ -1,0 +1,8 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    
+	<TextView android:id="@+id/totalBox" android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center" android:text="@string/zeros" android:textSize="40sp"/>
+	<EditText android:id="@+id/priceBox" android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="right" android:inputType="numberDecimal" android:text="@string/zeros" android:textSize="32sp"/>
+</LinearLayout>
