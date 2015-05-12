@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
-import net.apocalypselabs.register.CashCheck;
+import net.apocalypselabs.register.Cash;
 import net.apocalypselabs.register.Main;
 
 /*
@@ -20,15 +20,21 @@ extends Activity {
     }
 
     public void loadCash() {
-        Intent intent = new Intent(this.getApplicationContext(), (Class)CashCheck.class);
+        Intent intent = new Intent(this.getApplicationContext(), (Class)Cash.class);
         intent.putExtra("amount", this.amount);
         this.startActivity(intent);
     }
 
     public void loadCheck() {
+		Intent intent = new Intent(getApplicationContext(), Check.class);
+        intent.putExtra("amount", amount);
+        this.startActivity(intent);
     }
 
     public void loadCredit() {
+		Intent intent = new Intent(getApplicationContext(), Credit.class);
+        intent.putExtra("amount", amount);
+        this.startActivity(intent);
     }
 
     public void loadGift() {

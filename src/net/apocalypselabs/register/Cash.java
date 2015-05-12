@@ -19,7 +19,7 @@ import net.apocalypselabs.register.Thanks;
 /*
  * Failed to analyse overrides
  */
-public class CashCheck extends Activity implements View.OnKeyListener {
+public class Cash extends Activity implements View.OnKeyListener {
     private double amount;
     private EditText in;
     private TextView to;
@@ -79,15 +79,16 @@ public class CashCheck extends Activity implements View.OnKeyListener {
 
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.setContentView(R.layout.cashcheck);
+        setContentView(R.layout.cash);
         Bundle bundle2 = this.getIntent().getExtras();
         if (bundle2 != null) {
-            this.amount = bundle2.getDouble("amount");
-            this.to = (TextView)this.findViewById(R.id.totalBox);
-            this.to.setText((CharSequence)(this.getString(R.string.total) + ": " + NumberFormat.getCurrencyInstance().format(this.amount)));
-            this.in = (EditText)this.findViewById(R.id.priceBox);
-            this.in.addTextChangedListener((TextWatcher)new MoneyTextWatcher(this.in));
-            this.in.setOnKeyListener((View.OnKeyListener)this);
+            amount = bundle2.getDouble("amount");
+            to = (TextView)this.findViewById(R.id.totalBox);
+            to.setText((CharSequence)(this.getString(R.string.total) + ": "
+				+ NumberFormat.getCurrencyInstance().format(this.amount)));
+            in = (EditText)this.findViewById(R.id.priceBox);
+            in.addTextChangedListener((TextWatcher)new MoneyTextWatcher(this.in));
+            in.setOnKeyListener((View.OnKeyListener)this);
             return;
         }
         Toast.makeText((Context)this, (CharSequence)this.getString(R.string.argerror), (int)1).show();

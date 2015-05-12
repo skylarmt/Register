@@ -30,7 +30,15 @@
 			android:configChanges="keyboardHidden|orientation" />
 		<activity
 			android:label="@string/app_name"
-			android:name="CashCheck"
+			android:name="Cash"
+			android:configChanges="keyboardHidden|orientation" />
+		<activity
+			android:label="@string/app_name"
+			android:name="Check"
+			android:configChanges="keyboardHidden|orientation" />
+		<activity
+			android:label="@string/app_name"
+			android:name="Credit"
 			android:configChanges="keyboardHidden|orientation" />
 		<activity
 			android:label="@string/app_name"

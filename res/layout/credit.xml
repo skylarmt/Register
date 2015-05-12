@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<TextView
+		android:id="@+id/creditTotalBox"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="@string/zeros"
+		android:textSize="40sp" />
+	<EditText
+		android:id="@+id/cardNumber"
+		android:inputType="number"
+		android:textSize="30sp"
+		android:hint="@string/cardNumHint"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		/>
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:orientation="horizontal"
+		android:layout_height="wrap_content"
+		>
+		<EditText
+			android:id="@+id/cardExp"
+			android:inputType="number"
+			android:textSize="30sp"
+			android:hint="@string/cardExpHint"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+		/>
+		<EditText
+			android:id="@+id/cardCvv"
+			android:inputType="number"
+			android:textSize="30sp"
+			android:hint="@string/cardCvvHint"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+		/>
+	</LinearLayout>
+	<Button
+		android:id="@+id/creditPayBtn"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5sp"
+		android:text="@string/paycredit"
+		android:onClick="next" />
+</LinearLayout>
+
