@@ -15,8 +15,8 @@
 	<string name="limit">Transaction limit reached!</string>
 	<string name="argerror">Missing arguments!</string>
 	<string name="paycheck">Pay with Check</string>
-	<string name="cardNumHint">1234 5678 9101</string>
-	<string name="cardExpHint">MM/YY</string>
+	<string name="cardNumHint">4242424242424242</string>
+	<string name="cardExpHint">MMYY</string>
 	<string name="cardCvvHint">CVV</string>
 	<string name="paycredit">Pay with Credit</string>
 	<string name="yearPrefix">20</string>
